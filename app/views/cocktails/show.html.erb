@@ -1,0 +1,11 @@
+<h1><%= @cocktail.name %></h1>
+<h6>ADD INGREDIENTS</h6>
+<%= render 'doses/form' %>
+
+<div class="mt-4">
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.description %> | <%= dose.ingredient.name %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,1 +1,9 @@
 <h1>cocktails index</h1>
+<h6><%= link_to "CREATE NEW COCKTAIL", new_cocktail_path %></h6>
+
+
+<ul>
+  <% @cocktails.each do |drink| %>
+  <li><%= link_to drink.name, cocktail_path(drink) %></li>
+  <% end %>
+</ul>
